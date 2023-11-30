@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Lidar Three.js</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+			}
+            body {
+				font-family: Monospace;
+				font-size: 13px;
+				line-height: 24px;
+				overscroll-behavior: none;
+				overflow: hidden;
+				/*background-color: #D3D3D3*/
+				
+			}
+			#info {
+				position:absolute;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				top: 0;
+			}
+        </style>
+		<script type="importmap" defer>
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/",
+					"gsap": "/js/gsap/dist/gsap.min.js",
+					"models": "/assets/models/"
+				}
+			}
+		</script>
+		<script type="module" src="js/main.js" defer></script>
+	</head>
+    <body>
+		<div id="info">
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a>
+			 webgl - LiDAR V1 - Mesh Construction
+		</div>
+		<div id="container"></div>
+    </body>
+</html>
