@@ -1,0 +1,11 @@
+Model Information:
+* title:	Solar Panel
+* source:	https://sketchfab.com/3d-models/solar-panel-e6ae49a8f97b49bca6c2b2a11f8549b5
+* author:	wuza8 (https://sketchfab.com/wuza8)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Solar Panel" (https://sketchfab.com/3d-models/solar-panel-e6ae49a8f97b49bca6c2b2a11f8549b5) by wuza8 (https://sketchfab.com/wuza8) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

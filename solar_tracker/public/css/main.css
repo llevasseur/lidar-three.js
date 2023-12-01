@@ -1,0 +1,327 @@
+body {
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+	overflow: hidden;
+}
+
+a {
+	color: #ff0;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+#info {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1; /* TODO Solve this in HTML */
+}
+
+a, button, input, select {
+	pointer-events: auto;
+}
+
+.lil-gui {
+	z-index: 2 !important; /* TODO Solve this in HTML */
+}
+
+@media all and ( max-width: 640px ) {
+	.lil-gui.root { 
+		right: auto;
+		top: auto;
+		max-height: 50%;
+		max-width: 80%;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+#overlay {
+	position: absolute;
+	font-size: 16px;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: rgba(0,0,0,0.7);
+}
+
+	#overlay button {
+		background: transparent;
+		border: 0;
+		border: 1px solid rgb(255, 255, 255);
+		border-radius: 4px;
+		color: #ffffff;
+		padding: 12px 18px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+#notSupported {
+	width: 50%;
+	margin: auto;
+	background-color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+/* HUD styling */
+#hudBox {
+	position: absolute;
+	bottom: 10px;
+	display: flex;
+	margin-left: 10px;
+}
+.hud {
+	width: 270px;
+	height: 50px;
+  	border: 2px solid black;
+  	padding: 50px;
+  	margin: 5px 2px 5px 2px;
+	background-color:dimgray;
+}
+.hud-title {
+	position: relative;
+	top: -30px;
+	left: -40px;
+	font-size: 18px;
+}
+#staticHud {
+
+}
+#trackingHud {
+
+}
+
+.hud-efficiency {
+	position: relative;
+	text-align: center;
+	top: -100px;
+	font-size: 15px;
+	width: 350px;
+}
+
+#staticWattRateDiv {
+	position: relative;
+	right: -178px;
+	top: -17px;
+}
+
+#trackingWattRateDiv {
+	position: relative;
+	right: -178px;
+	top: -17px;
+}
+
+.hud-capacity {
+	position: relative;
+	text-align: center;
+	top: -75px;
+	font-size: 16px;
+	width: 350px;
+}
+
+#staticHudCapacity {
+	left: 0px;
+}
+
+#trackingHudCapacity {
+	left: 0px;
+}
+
+#staticWattCapacityDiv {
+	position: relative;
+	right: -178px;
+	top: -17px;
+}
+
+#trackingWattCapacityDiv {
+	position: relative;
+	right: -178px;
+	top: -17px;
+}
+
+.scaled {
+	position: relative;
+	transform: scale(0.3);
+}
+.rates {
+	position: relative;
+	top: 90px;
+}
+/* Emoji css styling */
+.emoji {
+	position: relative;
+	font-size: 40px;
+	top: -22px;
+	left: 260px;
+}
+.emoji-smile {
+	position: relative;
+	top: -240px;
+	left: 600px;
+	width: 120px;
+	height: 120px;
+	background: #ffd200;
+	border-radius: 50%;
+  }
+  .emoji-sad {
+	position: relative;
+	top: -240px;
+	left: 600px;
+	width: 120px;
+	height: 120px;
+	background: #ffd200;
+	border-radius: 50%;
+	margin-left: 1%;
+  }
+  
+  .face {
+	width: inherit;
+	height: inherit;
+  }
+  
+  .eyebrow-left {
+	position: absolute;
+	height: 20px;
+	width: 24px;
+	left: 27px;
+	border-radius: 50%;
+	border: 5px solid transparent;
+	box-sizing: border-box;
+	border-top-color: black;
+	top: 25px;
+  }
+  
+  .eyebrow-right {
+	position: absolute;
+	height: 20px;
+	width: 24px;
+	right: 27px;
+	border-radius: 50%;
+	border: 5px solid transparent;
+	box-sizing: border-box;
+	border-top-color: black;
+	top: 25px;
+  }
+  
+  .eye-left {
+	position: absolute;
+	width: 11px;
+	height: 12px;
+	background: black;
+	left: 33px;
+	top: 40px;
+	border-radius: 50%;
+  }
+  
+  .eye-right {
+	position: absolute;
+	width: 11px;
+	height: 12px;
+	background: black;
+	right: 33px;
+	top: 40px;
+	border-radius: 50%;
+  }
+  
+  .mouth-happy {
+	position: absolute;
+	width: 78px;
+	height: 80px;
+	border: 6px solid transparent;
+	top: 12px;
+	left: 20px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border-bottom-color: black;
+  }
+  
+  .mouth-sad {
+	position: absolute;
+	width: 78px;
+	height: 80px;
+	border: 6px solid transparent;
+	top: 70px;
+	left: 20px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border-top-color: black;
+  }
+
+/* Progress Bar styling */
+
+.hud .progress {
+	width: 220px;
+	height: 10px;
+}
+
+#staticProgress {
+	margin-left: 0px;
+}
+
+#trackingProgress {
+	margin-left: 0px;
+}
+
+.progress {
+	padding: 4px;
+	background: rgba(0, 0, 0, 0.25);
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+	height: 10px;
+	border-radius: 4px;
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+	-webkit-transition: 0.4s linear;
+	-moz-transition: 0.4s linear;
+	-o-transition: 0.4s linear;
+	transition: 0.4s linear;
+	-webkit-transition-property: width, background-color;
+	-moz-transition-property: width, background-color;
+	-o-transition-property: width, background-color;
+	transition-property: width, background-color;
+	-webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+/* THREEjs Styling */
+#container {
+	position: absolute;
+	z-index: -1;
+}
+
+.clock {
+	position: absolute;
+}

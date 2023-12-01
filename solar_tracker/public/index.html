@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl2 - SPIC3D - </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- Initialize non-module scripts -->
+		<script src="js/libraries/suncalc.js"></script>
+        
+		<link type="text/css" rel="stylesheet" href="/css/main.css">
+	</head>
+
+    <body>
+        <div id="container"></div>
+		<h1 id="info" style="color:Black">
+			<!-- <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webgl2 - SPIC3D -->
+			<br>
+			<span id='info-date'>June 21, 2022 05:40:00</span> Halalt BC
+		</h1>
+		<h2 id="title" style="display:none;">
+
+		</h2>
+
+		<div id="hudBox">
+			<div id="staticHud" class="hud">
+				<div id="" class="hud-title">
+					Static Panel: <span id="staticHudPercent" class="hud-title-percent">0%</span>
+					<div>
+						<span id="staticEmoji" class="emoji">&#128534;</span>
+					</div>
+					<!--<div class="scaled">
+						 
+						<div class="emoji-sad">
+							<div class="face">
+								<div class="eyebrow-left"></div>
+								<div class="eyebrow-right"></div>
+								<div class="eye-left"></div>
+								<div class="eye-right"></div>
+								<div class="mouth-sad"></div>
+							</div>
+						</div>
+					</div>-->
+					<div class="rates">
+						<div id="staticHudEfficiency" class="hud-efficiency">
+							<!--<i class="fas fa-3x fa-battery-full icon"></i>-->
+							<div id="staticProgress" class="progress">
+								<div id="staticBarEfficiency" class="progress-bar"></div>
+								<div id="staticWattRateDiv">
+									<span id="staticWattRate" class="hud-watt-rate">0</span>Watts
+								</div>
+							</div> 
+						</div>
+						<div id="staticHudCapacity" class="hud-capacity">
+							<div id="staticProgress" class="progress">
+								<div id="staticBarCapacity" class="progress-bar"></div>
+								<div id="staticWattCapacityDiv">
+									<span id="staticWattCapacity" class="hud-watt-capacity">0</span> Watt Hour
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="trackingHud" class="hud">
+				<div id="" class="hud-title">
+					Tracking Panel: <span id="trackingHudPercent" class="hud-title-percent">0%</span>
+					<div>
+						<span id="trackingEmoji" class="emoji">&#128534;</span>
+					</div>
+					<!--<div class="scaled">
+						
+						<div class="emoji-smile">
+							<div class="face">
+							<div class="eyebrow-left"></div>
+							<div class="eyebrow-right"></div>
+							<div class="eye-left"></div>
+							<div class="eye-right"></div>
+							<div class="mouth-happy"></div>
+							</div>
+						</div>
+					</div>-->
+					<div class="rates">
+						<div id="trackingHudEfficiency" class="hud-efficiency">
+							<!--<i class="fas fa-3x fa-battery-full icon"></i>-->
+							<div id="trackingProgress" class="progress">
+								<div id="trackingBarEfficiency" class="progress-bar"></div>
+								<div id="trackingWattRateDiv">
+									<span id="trackingWattRate" class="hud-watt-rate">0</span> Watts
+								</div>
+							</div>
+						</div>
+						<div id="trackingHudCapacity" class="hud-capacity">
+							<div id="trackingProgress" class="progress">
+								<div id="trackingBarCapacity" class="progress-bar"></div>
+								<div id="trackingWattCapacityDiv">
+									<span id="trackingWattCapacity" class="hud-watt-capacity">0</span> Watt Hour
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<canvas id="clock" width="200" height="200"></canvas>
+
+        <!-- Import maps polyfill -->
+		<!-- Remove this when import maps will be widely supported -->
+		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "/js/libraries/three.module.js",
+					"three/addons/": "/js/libraries/"
+				}
+			}
+		</script>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script type="module" src="js/main.js"></script>
+		
+    </body>
+</html>
