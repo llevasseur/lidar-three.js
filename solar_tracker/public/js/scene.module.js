@@ -15,15 +15,15 @@ import { FXAAShader } from 'three/addons/FXAAShader.js'
 import {render} from './vis.module.js'
 import { MySky } from './sky.module.js'
 import { Ground } from './ground.module.js'
-import { Solar } from './solar.module.js'
-import { House } from './house.module.js'
-import { Wire } from './wire.module.js'
-import { EnergyFlow } from './energyFlow.module.js'
-import { SeaCan } from './seaCan.module.js'
+import { Tree } from './tree.module.js'
+// import tree here
+//import { House } from './house.module.js'
+//import { Wire } from './wire.module.js'
+//import { EnergyFlow } from './energyFlow.module.js'
+//import { SeaCan } from './seaCan.module.js'
 
 export let scene, camera, renderer, controls, container, stats, sky
-export let ground, staticSolar, trackingSolar, house, trackingWire
-export let flow, seaCan
+export let ground, tree
 export let manager, composer, status=false
 
 let effectFXAA, outlinePass
@@ -39,9 +39,11 @@ if ( WebGL.isWebGL2Available() === false ) {
 }
 
 function initScene() {
+    /**@todo  is thi necessary? */
     setTimeout(() => {
         status = true
     }, 10000)
+
     container = document.getElementById( 'container' )
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     renderer.setPixelRatio( window.devicePixelRatio )
@@ -129,34 +131,9 @@ function initTerrain() {
     ground = new Ground( scene )
 }
 
-function initSolar() {
-    staticSolar = new Solar( scene, 'staticSolarParams', '  Static Panel' )
-    
-    trackingSolar = new Solar( scene, 'trackingSolarParams', 'Tracking Panel', true )
-
+function initTree() {
+    tree = new Tree( scene, 'Default' )
 }
-
-function initHouse() {
-    house = new House( scene, 'house1' )
-}
-
-function initSeaCan() {
-    seaCan = new SeaCan( scene, 'seacan1' )
-}
-
-function connectTrackingToHouse() {
-    trackingWire = new Wire( scene, [
-        new THREE.Vector3( -10, 0, 10 ),
-        new THREE.Vector3( -5, 5, 5 ),
-        new THREE.Vector3( 0, 0, 0 ),
-        new THREE.Vector3( 5, -5, 5 ),
-        new THREE.Vector3( 10, 0, 10 )
-    ])
-}
-
-/*function createFlow() {
-    flow = new EnergyFlow( scene )
-}*/
 
 
 function onWindowResize() {
@@ -201,6 +178,5 @@ function checkIntersection() {
 
 export {
     initScene, initSky, initTerrain, 
-    initSolar, initHouse, connectTrackingToHouse,
-    postProcessing, initSeaCan
+    postProcessing, initTree
 }

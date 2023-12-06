@@ -17,9 +17,7 @@ function main() {
     Scene.initTerrain()
 
     // init objects
-    Scene.initSolar()
-    Scene.initHouse()
-    Scene.initSeaCan()
+    Scene.initTree()
     //Scene.connectTrackingToHouse()
 
     // init menu

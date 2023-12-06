@@ -1,1 +1,0 @@
-//http://bkcore.com/blog/3d/webgl-three-js-volumetric-light-godrays.html
